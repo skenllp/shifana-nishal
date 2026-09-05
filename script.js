@@ -17,6 +17,7 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
+// Multi-language Switcher
 document.querySelectorAll('.langbar button').forEach(button => {
   button.addEventListener('click', () => {
     document.querySelectorAll('.langbar button').forEach(item => item.classList.remove('active'));
@@ -32,7 +33,45 @@ document.querySelectorAll('.langbar button').forEach(button => {
   });
 });
 
-document.getElementById('audio-toggle').addEventListener('click', event => {
-  event.currentTarget.classList.toggle('muted');
-  event.currentTarget.textContent = event.currentTarget.classList.contains('muted') ? '🔈' : '🔊';
-});
+// Opening Section & Background Music Integration
+const openBtn = document.getElementById('open-btn');
+const openingOverlay = document.getElementById('opening-overlay');
+const bgMusic = document.getElementById('bg-music');
+const audioToggle = document.getElementById('audio-toggle');
+
+if (openingOverlay && openBtn) {
+  document.body.classList.add('lock-scroll');
+  
+  openBtn.addEventListener('click', () => {
+    openingOverlay.classList.add('opened');
+    document.body.classList.remove('lock-scroll');
+
+    if (bgMusic) {
+      bgMusic.play().then(() => {
+        if (audioToggle) {
+          audioToggle.classList.remove('muted');
+          audioToggle.textContent = '🔊';
+          audioToggle.setAttribute('aria-label', 'Mute audio');
+        }
+      }).catch(err => {
+        console.warn('Playback error or user gesture required:', err);
+      });
+    }
+  });
+}
+
+if (audioToggle && bgMusic) {
+  audioToggle.addEventListener('click', () => {
+    if (bgMusic.paused) {
+      bgMusic.play();
+      audioToggle.classList.remove('muted');
+      audioToggle.textContent = '🔊';
+      audioToggle.setAttribute('aria-label', 'Mute audio');
+    } else {
+      bgMusic.pause();
+      audioToggle.classList.add('muted');
+      audioToggle.textContent = '🔈';
+      audioToggle.setAttribute('aria-label', 'Unmute audio');
+    }
+  });
+}

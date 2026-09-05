@@ -30,6 +30,24 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <audio id="bg-music" src="music.mp3" loop preload="auto"></audio>
+
+  <!-- OPENING INVITATION OVERLAY -->
+  <div id="opening-overlay" class="opening-overlay">
+    <div class="kerala-border-top"></div>
+    <div class="opening-content">
+      <div class="calligraphy">wedding</div>
+      <div class="monogram">S&amp;N</div>
+      <p class="opening-eyebrow">The Wedding Reception Of</p>
+      <h1 class="opening-names">Shifana <span class="amp">&amp;</span> Nishal</h1>
+      <p class="opening-date">04 . 10 . 2026</p>
+      <button id="open-btn" class="open-btn" type="button" aria-label="Open wedding invitation">
+        <span class="btn-icon">✉</span> Open Invitation
+      </button>
+    </div>
+    <div class="kerala-border-bottom"></div>
+  </div>
+
   <button class="audio-toggle muted" id="audio-toggle" type="button" aria-label="Unmute audio">🔈</button>
   <div class="langbar">
     <button class="active" data-lang="en">EN</button>
