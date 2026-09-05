@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Marcellus&family=Amiri:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;600&family=Mrs+Saint+Delafield&family=Noto+Serif+Malayalam:wght@400;600&family=Noto+Serif+Devanagari:wght@400;600&display=swap');
 
 :root {
-  --gold: #b8935f;
-  --gold-light: #d9bd8f;
-  --gold-dark: #8c6838;
-  --ink: #2b2620;
-  --ink-light: #5b5347;
-  --cream: #faf6ee;
-  --cream-2: #f2ead9;
-  --line: rgba(184, 147, 95, 0.35);
-  --shadow-soft: 0 16px 40px rgba(43, 38, 32, 0.08);
+  /* Pink & Beige Luxury Palette */
+  --rose: #b86b7c;
+  --rose-light: #df9aa8;
+  --rose-dark: #974e5e;
+  --rose-soft: #fcf1f3;
+  --beige: #f6eee5;
+  --beige-2: #ede1d4;
+  --beige-dark: #c4a792;
+  --ink: #322226;
+  --ink-light: #5f4d52;
+  --cream: #fbf6f2;
+  --cream-2: #f5ebe2;
+  --line: rgba(184, 107, 124, 0.28);
+  --shadow-soft: 0 16px 40px rgba(50, 34, 38, 0.07);
 }
 
 * {
@@ -52,7 +57,7 @@ body.lock-scroll {
   position: fixed;
   inset: 0;
   z-index: 1000;
-  background: radial-gradient(circle at center, rgba(255, 252, 245, 0.99) 0%, rgba(244, 236, 220, 0.99) 100%);
+  background: radial-gradient(circle at center, rgba(255, 248, 245, 0.99) 0%, rgba(246, 235, 227, 0.99) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,12 +80,12 @@ body.lock-scroll {
   max-width: 520px;
   width: 100%;
   padding: 44px 28px;
-  border: 1px solid rgba(184, 147, 95, 0.25);
+  border: 1px solid rgba(184, 107, 124, 0.22);
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.76);
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  box-shadow: 0 20px 60px rgba(43, 38, 32, 0.08);
+  box-shadow: 0 20px 60px rgba(50, 34, 38, 0.08);
   margin: auto;
 }
 
@@ -89,7 +94,7 @@ body.lock-scroll {
   letter-spacing: 3px;
   font-size: 13px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--rose);
   margin-bottom: 10px;
 }
 
@@ -106,7 +111,7 @@ body.lock-scroll {
   font-family: Marcellus, serif;
   letter-spacing: 3.5px;
   font-size: 14px;
-  color: #7a7263;
+  color: #7d6b70;
   margin-bottom: 28px;
 }
 
@@ -120,20 +125,20 @@ body.lock-scroll {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #fff;
-  background: linear-gradient(135deg, #c7a46e, #a8824c);
+  background: linear-gradient(135deg, #cc8091, #a85869);
   border: none;
   padding: 13px 32px;
   border-radius: 30px;
   cursor: pointer;
-  box-shadow: 0 10px 24px rgba(184, 147, 95, 0.35);
+  box-shadow: 0 10px 24px rgba(184, 107, 124, 0.35);
   transition: all 0.25s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
 .open-btn:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 14px 30px rgba(184, 147, 95, 0.45);
-  background: linear-gradient(135deg, #d4b27c, #b8935f);
+  box-shadow: 0 14px 30px rgba(184, 107, 124, 0.45);
+  background: linear-gradient(135deg, #d88e9f, #b86778);
 }
 
 .open-btn:active {
@@ -180,9 +185,9 @@ body.lock-scroll {
 }
 
 .langbar button {
-  background: rgba(250, 246, 238, 0.88);
+  background: rgba(251, 246, 242, 0.9);
   border: 1px solid var(--line);
-  color: var(--gold);
+  color: var(--rose);
   padding: 5px 12px;
   border-radius: 20px;
   cursor: pointer;
@@ -194,14 +199,14 @@ body.lock-scroll {
 
 .langbar button:hover {
   transform: translateY(-1px);
-  border-color: var(--gold);
+  border-color: var(--rose);
 }
 
 .langbar button.active {
-  background: var(--gold);
+  background: var(--rose);
   color: #fff;
-  box-shadow: 0 8px 18px rgba(43, 38, 32, 0.16);
-  border-color: var(--gold);
+  box-shadow: 0 8px 18px rgba(184, 107, 124, 0.22);
+  border-color: var(--rose);
 }
 
 .audio-toggle {
@@ -212,10 +217,10 @@ body.lock-scroll {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: rgba(250, 246, 238, 0.95);
-  color: var(--gold);
+  background: rgba(251, 246, 242, 0.95);
+  color: var(--rose);
   border: 1px solid var(--line);
-  box-shadow: 0 8px 22px rgba(43, 38, 32, 0.12);
+  box-shadow: 0 8px 22px rgba(50, 34, 38, 0.1);
   cursor: pointer;
   font-size: 18px;
   display: flex;
@@ -233,7 +238,7 @@ body.lock-scroll {
 
 .audio-toggle:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 26px rgba(43, 38, 32, 0.16);
+  box-shadow: 0 10px 26px rgba(184, 107, 124, 0.25);
 }
 
 .audio-toggle.muted {
@@ -244,8 +249,8 @@ body.lock-scroll {
    HERO SECTION
 ========================================= */
 .hero {
-  background: radial-gradient(circle at top, rgba(184, 147, 95, 0.18), transparent 58%),
-              linear-gradient(135deg, #fcf7ec 0%, var(--cream) 50%, #f7efe0 100%);
+  background: radial-gradient(circle at top, rgba(223, 154, 168, 0.18), transparent 60%),
+              linear-gradient(135deg, #fdf8f5 0%, var(--cream) 50%, #f6ece3 100%);
   padding-top: 110px;
   padding-bottom: 90px;
 }
@@ -254,12 +259,12 @@ body.lock-scroll {
   max-width: 760px;
   width: 100%;
   padding: 44px 28px;
-  border: 1px solid rgba(184, 147, 95, 0.22);
+  border: 1px solid rgba(184, 107, 124, 0.2);
   border-radius: 30px;
-  background: rgba(255, 255, 255, 0.68);
+  background: rgba(255, 255, 255, 0.76);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  box-shadow: 0 20px 60px rgba(43, 38, 32, 0.08);
+  box-shadow: 0 20px 60px rgba(50, 34, 38, 0.07);
 }
 
 .hero:before,
@@ -268,7 +273,7 @@ body.lock-scroll {
   position: absolute;
   width: 1px;
   height: 60px;
-  background: var(--gold);
+  background: var(--rose);
   opacity: 0.45;
 }
 
@@ -277,9 +282,9 @@ body.lock-scroll {
 
 .calligraphy {
   font-family: 'Mrs Saint Delafield', cursive;
-  font-size: 52px;
-  line-height: 1;
-  color: var(--gold);
+  font-size: clamp(38px, 6vw, 54px);
+  line-height: 1.1;
+  color: var(--rose);
   margin-bottom: 8px;
   opacity: 0.95;
 }
@@ -288,7 +293,7 @@ body.lock-scroll {
   font-family: Marcellus, serif;
   font-size: 15px;
   letter-spacing: 5px;
-  color: var(--gold);
+  color: var(--rose);
   border: 1px solid var(--line);
   border-radius: 50%;
   width: 62px;
@@ -298,6 +303,7 @@ body.lock-scroll {
   justify-content: center;
   margin: 0 auto 20px;
   padding-left: 5px;
+  background: rgba(255, 255, 255, 0.4);
 }
 
 .eyebrow {
@@ -305,7 +311,7 @@ body.lock-scroll {
   letter-spacing: 3.5px;
   font-size: 13px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--rose);
   margin-bottom: 16px;
 }
 
@@ -319,7 +325,7 @@ body.lock-scroll {
 }
 
 .amp {
-  color: var(--gold);
+  color: var(--rose);
   font-style: italic;
   font-family: 'Cormorant Garamond', serif;
   margin: 0 4px;
@@ -349,7 +355,7 @@ body.lock-scroll {
 .hijri-pill {
   font-family: 'Amiri', serif;
   font-size: 19px;
-  color: var(--gold);
+  color: var(--rose);
   letter-spacing: 1px;
   margin-bottom: 16px;
 }
@@ -360,7 +366,7 @@ body.lock-scroll {
   font-size: 11.5px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--rose);
   animation: bob 2.2s ease-in-out infinite;
 }
 
@@ -378,7 +384,7 @@ body.lock-scroll {
   background-repeat: repeat-x;
   background-size: 34px 14px;
   opacity: 0.55;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='14' viewBox='0 0 34 14'%3E%3Cpath d='M2 12 C2 4 10 2 14 8 C18 2 26 4 26 12 C21 9 19 12 17 8 C15 12 7 9 2 12 Z' fill='none' stroke='%23b8935f' stroke-width='.9'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34' height='14' viewBox='0 0 34 14'%3E%3Cpath d='M2 12 C2 4 10 2 14 8 C18 2 26 4 26 12 C21 9 19 12 17 8 C15 12 7 9 2 12 Z' fill='none' stroke='%23b86b7c' stroke-width='.9'/%3E%3C/svg%3E");
 }
 
 .kerala-border-top { top: 0; }
@@ -391,7 +397,7 @@ body.lock-scroll {
   font-family: Marcellus, serif;
   letter-spacing: 4px;
   font-size: 14px;
-  color: var(--gold);
+  color: var(--rose);
   margin-bottom: 20px;
   padding-left: 3px;
 }
@@ -412,7 +418,7 @@ body.lock-scroll {
 }
 
 .jasmine {
-  color: var(--gold);
+  color: var(--rose);
   font-size: 16px;
   letter-spacing: 4px;
 }
@@ -421,16 +427,16 @@ body.lock-scroll {
   max-width: 640px;
   width: 100%;
   padding: 40px 28px;
-  border: 1px solid rgba(184, 147, 95, 0.22);
+  border: 1px solid rgba(184, 107, 124, 0.2);
   border-radius: 28px;
-  background: linear-gradient(135deg, rgba(255, 252, 245, 0.96), rgba(242, 234, 217, 0.92));
-  box-shadow: 0 16px 40px rgba(43, 38, 32, 0.08);
+  background: linear-gradient(135deg, rgba(255, 252, 250, 0.96), rgba(246, 237, 230, 0.92));
+  box-shadow: 0 16px 40px rgba(50, 34, 38, 0.07);
 }
 
 .bismillah {
   font-family: 'Amiri', serif;
   font-size: 26px;
-  color: var(--gold);
+  color: var(--rose);
   margin-bottom: 20px;
   line-height: 1.6;
 }
@@ -439,14 +445,14 @@ body.lock-scroll {
   font-family: 'Amiri', serif;
   font-size: 22px;
   line-height: 2.1;
-  color: #4a4335;
+  color: #4a383d;
   margin-bottom: 14px;
 }
 
 .verse-meaning {
   font-size: 14.5px;
   font-style: italic;
-  color: #8a8272;
+  color: #837075;
   max-width: 480px;
   line-height: 1.7;
   margin: 0 auto 28px;
@@ -470,7 +476,7 @@ body.lock-scroll {
 .couple-arabic small {
   display: block;
   font-size: 17px;
-  color: var(--gold);
+  color: var(--rose);
   margin: 4px 0;
 }
 
@@ -492,11 +498,11 @@ body.lock-scroll {
   flex: 1 1 300px;
   max-width: 350px;
   width: 100%;
-  padding: 28px 22px;
-  border: 1px solid rgba(184, 147, 95, 0.2);
+  padding: 30px 24px;
+  border: 1px solid rgba(184, 107, 124, 0.2);
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.75);
-  box-shadow: 0 14px 34px rgba(43, 38, 32, 0.06);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 14px 34px rgba(50, 34, 38, 0.05);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -507,7 +513,7 @@ body.lock-scroll {
   letter-spacing: 2.5px;
   font-size: 12px;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--rose);
   margin-bottom: 10px;
 }
 
@@ -526,7 +532,7 @@ body.lock-scroll {
 }
 
 .family-card .rel {
-  color: #8a8272;
+  color: #8a7378;
   font-style: italic;
   font-size: 13.5px;
   display: block;
@@ -535,21 +541,11 @@ body.lock-scroll {
 
 .address-box {
   margin-top: auto;
-  padding-top: 14px;
-  border-top: 1px dashed rgba(184, 147, 95, 0.35);
-  font-size: 14px;
-  line-height: 1.6;
-  color: #635b50;
-}
-
-.address-box .addr-label {
-  font-family: Marcellus, serif;
-  font-size: 11px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 4px;
-  display: block;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(184, 107, 124, 0.25);
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: #6a575c;
 }
 
 .family-divider {
@@ -564,18 +560,17 @@ body.lock-scroll {
   font-family: Marcellus, serif;
   font-size: 14.5px;
   letter-spacing: 2.5px;
-  color: var(--gold);
+  color: var(--rose);
   text-transform: uppercase;
   border: 1px solid var(--line);
   padding: 9px 24px;
   border-radius: 30px;
-  background: rgba(255, 255, 255, 0.55);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 /* =========================================
-   COUNTDOWN SECTION
+   VENUE SECTION
 ========================================= */
-.countdown-title,
 .venue-title {
   font-family: Marcellus, serif;
   letter-spacing: 2px;
@@ -584,7 +579,6 @@ body.lock-scroll {
   color: var(--ink);
 }
 
-.countdown-sub,
 .venue-sub {
   font-style: italic;
   color: var(--ink-light);
@@ -592,59 +586,25 @@ body.lock-scroll {
   font-size: 16.5px;
 }
 
-.countdown-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 110px);
-  gap: 20px;
-  justify-content: center;
-  max-width: 600px;
-  width: 100%;
-}
-
-.cbox {
-  padding: 20px 0;
-  border: 1px solid var(--line);
-  border-radius: 14px;
-  background: linear-gradient(135deg, var(--cream-2), rgba(255, 255, 255, 0.88));
-  box-shadow: 0 10px 24px rgba(43, 38, 32, 0.06);
-}
-
-.cbox .num {
-  font-family: Marcellus, serif;
-  font-size: 36px;
-  color: var(--gold);
-  line-height: 1;
-}
-
-.cbox .lbl {
-  font-size: 12px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #7a7263;
-  margin-top: 6px;
-}
-
-/* =========================================
-   VENUE SECTION
-========================================= */
 .venue-illustration {
   width: 100%;
   max-width: 400px;
   aspect-ratio: 4/3;
   border-radius: 22px;
   margin-bottom: 24px;
-  background: linear-gradient(135deg, var(--cream-2), #e9ddc2);
+  background: linear-gradient(135deg, var(--cream-2), #ecdccf);
   display: flex;
   align-items: center;
   justify-content: center;
   border: 1px solid var(--line);
-  box-shadow: 0 16px 40px rgba(43, 38, 32, 0.08);
+  box-shadow: 0 16px 40px rgba(50, 34, 38, 0.07);
+  color: var(--rose);
 }
 
 .venue-illustration svg {
   width: 60%;
   height: 60%;
-  opacity: 0.85;
+  opacity: 0.88;
 }
 
 .venue-name {
@@ -656,7 +616,7 @@ body.lock-scroll {
 
 .venue-location {
   font-size: 17px;
-  color: var(--gold);
+  color: var(--rose);
   font-family: Marcellus, serif;
   letter-spacing: 1.5px;
   margin-bottom: 12px;
@@ -672,7 +632,7 @@ body.lock-scroll {
 
 .map-link {
   color: #fff;
-  background: var(--gold);
+  background: var(--rose);
   text-decoration: none;
   font-family: Marcellus, serif;
   font-size: 13.5px;
@@ -682,14 +642,14 @@ body.lock-scroll {
   margin-bottom: 30px;
   display: inline-block;
   transition: all 0.25s ease;
-  box-shadow: 0 6px 18px rgba(184, 147, 95, 0.35);
+  box-shadow: 0 6px 18px rgba(184, 107, 124, 0.35);
   -webkit-tap-highlight-color: transparent;
 }
 
 .map-link:hover {
   transform: translateY(-2px);
-  background: #a37e4c;
-  box-shadow: 0 8px 24px rgba(184, 147, 95, 0.45);
+  background: #a35667;
+  box-shadow: 0 8px 24px rgba(184, 107, 124, 0.45);
 }
 
 .venue-meta {
@@ -708,7 +668,7 @@ body.lock-scroll {
 
 .venue-note {
   font-size: 14px;
-  color: #8a8272;
+  color: #837075;
   max-width: 420px;
   line-height: 1.7;
   margin-top: 6px;
@@ -720,8 +680,8 @@ body.lock-scroll {
 ========================================= */
 .footer {
   min-height: 50vh;
-  background: linear-gradient(135deg, var(--ink), #332d25);
-  color: var(--cream-2);
+  background: linear-gradient(135deg, #2b1c20, #3a252b);
+  color: var(--beige);
   overflow: hidden;
   padding: 70px 24px;
 }
@@ -730,7 +690,7 @@ body.lock-scroll {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 20%, rgba(217, 189, 143, 0.16), transparent 42%);
+  background: radial-gradient(circle at 50% 20%, rgba(223, 154, 168, 0.16), transparent 42%);
   pointer-events: none;
 }
 
@@ -740,14 +700,15 @@ body.lock-scroll {
 }
 
 .footer .date-pill {
-  color: var(--gold-light);
-  border-color: rgba(217, 189, 143, 0.3);
+  color: var(--rose-light);
+  border-color: rgba(223, 154, 168, 0.35);
 }
 
 .rings {
   margin-top: 24px;
   width: 66px;
-  opacity: 0.85;
+  opacity: 0.88;
+  color: var(--rose-light);
 }
 
 .credit {
@@ -755,7 +716,7 @@ body.lock-scroll {
   font-family: Marcellus, serif;
   font-size: 13.5px;
   letter-spacing: 2px;
-  color: var(--gold-light);
+  color: var(--rose-light);
   text-transform: uppercase;
 }
 
@@ -796,14 +757,8 @@ body.lock-scroll {
     border-radius: 24px;
   }
   
-  .countdown-title,
   .venue-title {
     font-size: 24px;
-  }
-  
-  .countdown-grid {
-    grid-template-columns: repeat(2, minmax(0, 130px));
-    gap: 12px;
   }
   
   .family-wrap {
@@ -881,19 +836,6 @@ body.lock-scroll {
   }
   
   .couple-arabic {
-    font-size: 30px;
-  }
-  
-  .countdown-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-  
-  .cbox {
-    padding: 16px 0;
-  }
-  
-  .cbox .num {
     font-size: 30px;
   }
   
